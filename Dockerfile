@@ -1,4 +1,4 @@
-FROM pydev
+FROM nickhasser/pydev
 
 COPY requirements.txt ./requirements.txt
 
