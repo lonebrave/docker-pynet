@@ -1,5 +1,6 @@
 NAME = nickhasser/pynet
 DATE = $(shell date -I)
+LOCALDIR = `pwd`
 
 default: build
 
@@ -16,7 +17,7 @@ push-latest:
 	docker push $(NAME)
 
 debug:
-	docker run --rm -it $(NAME) /bin/sh
+	docker run --rm -it -v $(LOCALDIR):/tmp/hostdir $(NAME) /bin/sh
 
 run:
 	docker run --rm $(NAME)
