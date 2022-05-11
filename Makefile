@@ -17,7 +17,7 @@ push-latest:
 	docker push $(NAME)
 
 debug:
-	docker run --rm -it -v $(LOCALDIR):/tmp/hostdir $(NAME) /bin/sh
+	docker run --rm -it -v $(LOCALDIR):/tmp/hostdir $(NAME) /bin/bash
 
 run:
 	docker run --rm $(NAME)
