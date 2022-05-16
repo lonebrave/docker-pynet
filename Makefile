@@ -4,6 +4,9 @@ LOCALDIR = `pwd`
 
 default: build
 
+clean:
+	docker image rm $(NAME)
+
 build:
 	docker build -t $(NAME):$(DATE) .
 
