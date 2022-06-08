@@ -4,6 +4,9 @@ LABEL maintainer Nick Hasser <nick.hasser@gmail.com>
 
 COPY requirements.txt ./requirements.txt
 
-RUN pip install -r requirements.txt
+RUN apt update && \
+    apt upgrade -y && \
+    pip install -r requirements.txt && \
+    apt install -y graphviz
 
 CMD ["/bin/sh"]
