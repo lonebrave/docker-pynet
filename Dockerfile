@@ -6,8 +6,8 @@ COPY requirements.txt ./requirements.txt
 
 RUN apt update && \
     apt upgrade -y && \
-    pip install -r requirements.txt && \
     apt install -y graphviz && \
-    apt install -y libsnmp-dev
+    apt install -y libsnmp-dev && \
+    pip install -r requirements.txt
 
 CMD ["/bin/sh"]
